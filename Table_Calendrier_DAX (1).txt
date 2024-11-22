@@ -1,0 +1,8 @@
+Calendrier = 
+ADDCOLUMNS(
+    CALENDARAUTO() ,
+    "Année" , FORMAT([Date],"YYYY"),
+    "Année Semaine" , FORMAT([Date],"YYYY") & "-" & if(WEEKNUM([Date])<10 , "S0"&WEEKNUM([Date]) , "S"&WEEKNUM([Date])),
+    "Année Mois" , FORMAT([Date],"YYYY-MM"),
+    "Année Trimestre" , FORMAT([Date],"YYYY-TQ")
+    )
